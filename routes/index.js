@@ -4,10 +4,14 @@
  */
 
 exports.index = function(req, res){
-  res.render('index');
+  res.render('login');
 };
 
-exports.partials = function (req, res) {
-  var name = req.params.name;
-  res.render('partials/' + name);
+exports.standartRedirect = function(req, res){
+	console.log('Called public');
+	res.render('login');
 };
+// exports.partials = function (req, res) {
+//   var name = req.params.name;
+//   res.render('login');
+// };
